@@ -13,3 +13,7 @@ print(type(a_none))
 
 # snake case = a_b_c
 # python rule
+
+# sequence에는 list와 tuple이 있다.
+days = ["Mon", "Tue", "Wed", "Thur", "Fri"]
+# List is mutable sequence: 수정 가능하다.

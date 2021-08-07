@@ -17,3 +17,15 @@ print(type(a_none))
 # sequence에는 list와 tuple이 있다.
 days = ["Mon", "Tue", "Wed", "Thur", "Fri"]
 # List is mutable sequence: 수정 가능하다.
+
+
+# tuple은 수정 불가능.
+days = ("Mon", "Tue", "Wed", "Thur", "Fri")
+
+#dictionary
+sj = {
+  "name" :"sj",
+  "age" : 25,
+  "korean" : True,
+  "fav_food" : ["rice", "meet"]
+}

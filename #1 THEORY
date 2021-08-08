@@ -29,3 +29,10 @@ sj = {
   "korean" : True,
   "fav_food" : ["rice", "meet"]
 }
+
+
+# funtion like print and type is bult-in funtions
+print(len("asdasdad"))
+age = "16"
+print(type(age))
+# 타입을 변경할 수도 있음

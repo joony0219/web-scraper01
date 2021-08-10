@@ -36,3 +36,11 @@ print(len("asdasdad"))
 age = "16"
 print(type(age))
 # 타입을 변경할 수도 있음
+
+
+# funtion
+def say_hello(): 
+  print("hello")
+  print("bye")
+
+say_hello()

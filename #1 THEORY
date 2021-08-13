@@ -63,3 +63,7 @@ minus(2)
 
 def say_hello(name="anomymous"):
   print("hello", name)
+  
+  
+# print is None
+# we use return

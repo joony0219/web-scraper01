@@ -67,3 +67,13 @@ def say_hello(name="anomymous"):
   
 # print is None
 # we use return
+
+
+
+# Positional Argument(인자)
+# Keyword Argument
+def say_hello(name, age):
+  return f"hello {name} you are {age}"
+
+hello = say_hello("SJ", "12")
+print(hello)

@@ -120,3 +120,12 @@ def age_check(age):
         print("you are still kind of young")
     else:
         print("enjoy your drink")
+        
+
+days = ("Mon", "Tue", "Wed", "Thu", "Fri")
+
+for day in days:
+    if day == "Wed":
+        break
+    else:
+        print(day)

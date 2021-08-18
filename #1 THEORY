@@ -129,3 +129,11 @@ for day in days:
         break
     else:
         print(day)
+
+
+#module을 import해야 사용 가능, 사용할 것만 import하는게 좋음
+#import math 
+#from math import ceil, fsum
+#as로 이름을 바꿀 수 있음
+#from math import fsum as sexy_sum
+#다른 파일(.py)을 import 해서 사용 가능

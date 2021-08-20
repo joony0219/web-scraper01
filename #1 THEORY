@@ -1,4 +1,4 @@
-# variable
+# variable 변수 타입
 a_string = "like this"
 a_number = 3
 a_float = 3.12
@@ -11,7 +11,7 @@ print(type(a_float))
 print(type(a_boolean))
 print(type(a_none))
 
-# snake case = a_b_c
+# snake case = a_b_c 파이썬의 네이밍 룰
 # python rule
 
 # sequence에는 list와 tuple이 있다.
@@ -31,14 +31,14 @@ sj = {
 }
 
 
-# funtion like print and type is bult-in funtions
+# funtion like print and type is bult-in funtions 빌트인 함수
 print(len("asdasdad"))
 age = "16"
 print(type(age))
 # 타입을 변경할 수도 있음
 
 
-# funtion
+# funtion 함수
 def say_hello(): 
   print("hello")
   print("bye")
@@ -65,9 +65,8 @@ def say_hello(name="anomymous"):
   print("hello", name)
   
   
-# print is None
-# we use return
-
+# print is None 함수를 지정할 때 프린트로 지정하는것을 지양 because print는 리턴 값이 없음
+# so we use return 
 
 
 # Positional Argument(인자)
@@ -79,7 +78,8 @@ hello = say_hello("SJ", "12")
 print(hello)
 
 
-def plus(a, b):
+#기초 함수 만들어보기 (계산기능)
+def plus(a, b): 
   return (int(a) + int(b))
 
 def minus(a, b):
@@ -101,7 +101,8 @@ def power(a, b):
   return (int(a) ** int(b))
 
 
-def plus(a, b):
+# 예외 처리 부분
+def plus(a, b): 
   if type(b) is int or type(b) is float:
     return a + b
   else:
@@ -110,6 +111,7 @@ def plus(a, b):
 print(plus(12, 12))
 
 
+# if문 (elif else) 사용
 def age_check(age):
     print(f"you are {age}")
     if age < 18:
@@ -122,6 +124,7 @@ def age_check(age):
         print("enjoy your drink")
         
 
+#for문 사용
 days = ("Mon", "Tue", "Wed", "Thu", "Fri")
 
 for day in days:

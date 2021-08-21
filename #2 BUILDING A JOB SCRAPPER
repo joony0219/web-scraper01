@@ -1,1 +1,10 @@
 # web scraping : 웹 상의 데이터를 추출하는 것
+# requets 모듈을 import
+
+
+#파이썬만으로 웹 스크래퍼를 만들 수 있음. 효율을 위해 완성된 라이브러리를 가져다가 사용
+# used library : requests and library
+
+import requests
+indeed_result = requests.get("https://www.indeed.com/jobs?q=python&limit=50")
+print(indeed_result.text)

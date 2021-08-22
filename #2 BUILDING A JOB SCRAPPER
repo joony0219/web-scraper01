@@ -5,6 +5,19 @@
 #파이썬만으로 웹 스크래퍼를 만들 수 있음. 효율을 위해 완성된 라이브러리를 가져다가 사용
 # used library : requests and library
 
+
 import requests
+from bs4 import BeautifulSoup
+
 indeed_result = requests.get("https://www.indeed.com/jobs?q=python&limit=50")
-print(indeed_result.text)
+
+indeed_soup = BeautifulSoup(indeed_result.text, "html.parser")
+
+pagination = indeed_soup.find("div", {"class":"pagination"})
+
+pages = pagination.find_all('a')
+spans = []
+for page in pages:
+  spans.append(page.find("span"))
+print(spans[:-1])
+

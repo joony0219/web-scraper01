@@ -6,18 +6,21 @@
 # used library : requests and library
 
 
+# indeed.py
 import requests
 from bs4 import BeautifulSoup
 
-indeed_result = requests.get("https://www.indeed.com/jobs?q=python&limit=50")
+INDEED_URL = "https://www.indeed.com/jobs?q=python&limit=50"
 
-indeed_soup = BeautifulSoup(indeed_result.text, "html.parser")
+def extract_indeed_pages():
+  result = request.get(INDEED_URL)
+  soup = BeautifulSoup(result.text, "html.parser")
+  pagination = soup.find("div", {"class":"pagination"})
 
-pagination = indeed_soup.find("div", {"class":"pagination"})
+  links = pagination.find_all('a')
+  pages = []
+  for link in links[:-1]:
+    pages.append(int(link.find("span").string))
 
-links = pagination.find_all('a')
-pages = []
-for link in links[:-1]:
-  pages.append(int(link.find("span").string))
-
-max_page = pages[-1]
+  max_page = pages[-1]
+  return max_page

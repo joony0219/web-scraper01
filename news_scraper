@@ -1,12 +1,20 @@
+# request와 BeautifulSoup 라이브러리 import
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
+# html에 url주소 저장
 html = urlopen("http://news.naver.com/")
 
+# 파싱
 bsObject = BeautifulSoup(html, "html.parser")
 
+# 모든 링크를 가져옴
 for link in bsObject.find_all('a'):
   print(link.text.strip(), link.get('href'))
 
+# 모든 이미지를 가져옴
 for link in bsObject.find_all('img'):
   print(link.text.strip(), link.get('src'))
+
+# 스크레퍼(크롤러)를 발전시키는 것은 결국 파싱(parse)를 얼마나 효율적으로 하는가에 달려있다.
+# html을 파싱해 필요한 정보만을 추출
